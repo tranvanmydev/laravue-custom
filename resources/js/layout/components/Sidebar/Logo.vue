@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      title: 'Laravel Vue Admin',
+      title: 'UniC',
       logo: '/svg/logo.svg',
     };
   },

@@ -6,23 +6,27 @@ const errorRoutes = {
   component: Layout,
   redirect: 'noredirect',
   name: 'ErrorPages',
+  hidden: true,
   meta: {
     title: 'errorPages',
     icon: '404',
   },
-  children: [
-    {
-      path: '401',
-      component: () => import('@/views/error-page/401'),
-      name: 'Page401',
-      meta: { title: 'page401', noCache: true },
-    },
-    {
-      path: '404',
-      component: () => import('@/views/error-page/404'),
-      name: 'Page404',
-      meta: { title: 'page404', noCache: true },
-    },
+  children: [{
+    path: '401',
+    component: () =>
+                import ('@/views/error-page/401'),
+    name: 'Page401',
+    hidden: true,
+    meta: { title: 'page401' },
+  },
+  {
+    path: '404',
+    component: () =>
+                import ('@/views/error-page/404'),
+    name: 'Page404',
+    hidden: true,
+    meta: { title: 'page404' },
+  },
   ],
 };
 
